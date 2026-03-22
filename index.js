@@ -59,6 +59,13 @@ function formatPublicationRank(data, journalName) {
   const officialRank = data.data.officialRank?.all || {};
   const selectRank = data.data.officialRank?.select || {};
 
+  // Check if any ranking data actually exists
+  const allValues = Object.values(officialRank).concat(Object.values(selectRank));
+  const hasData = allValues.some(v => v !== null && v !== undefined && v !== "");
+  if (!hasData) {
+    return `No ranking data found for "${journalName}". Please check the journal name and try again. Tip: use the full official English name.`;
+  }
+
   let result = `## Journal Ranking: ${journalName}\n\n`;
 
   // SCI / SSCI core metrics
