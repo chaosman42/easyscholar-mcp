@@ -1,0 +1,39 @@
+{
+  "name": "easyscholar-mcp",
+  "version": "2.0.0",
+  "description": "MCP Server for querying journal rankings via EasyScholar API - SCI, SSCI, ABDC, AJG, CCF, impact factors, and 30+ ranking systems",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "easyscholar-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "easyscholar",
+    "journal",
+    "ranking",
+    "sci",
+    "ssci",
+    "abdc",
+    "ajg",
+    "ccf",
+    "impact-factor",
+    "academic",
+    "research",
+    "claude",
+    "ai"
+  ],
+  "author": "chaosman42",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chaosman42/easyscholar-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
